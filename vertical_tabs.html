@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        /*内容横排, float=left */
+        .tab {
+            float: left;
+            background-color: #f1f1f1;
+            width: 30%;
+            border: 1px solid #ccc;
+            height: 300px;
+        }
+
+        /* button竖排:display=block */
+        .tab button {
+            display: block;
+            font-size: 26px;
+            border: none;
+            outline: none;
+            background-color: inherit;
+            padding: 5px 10px;
+            width: 100%;
+            text-align: left;
+        }
+
+        /* 悬浮鼠标:hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ddd;
+        }
+
+
+        .summary {
+            width: 100%;
+            display: none;
+            padding: 0px 20px;
+            border: 1px solid #ccc;
+            border-left: none;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Vertical Tabs</h2>
+    <p>Click on the button inside the tabbed menu</p>
+    <div class="tab">
+        <button id="default" class="city" onclick="OpenCity(event,'WH')">WuHan</button>
+        <button class="city" onclick="OpenCity(event,'HZ')">HangZhou</button>
+        <button class="city" onclick="OpenCity(event,'BJ')">BeiJing</button>
+    </div>
+
+    <div id="WH" class="summary">
+        <h3>WuHan</h3>
+        <p>WuHan is a beautiful city.</p>
+    </div>
+
+    <div id="HZ" class="summary">
+        <h3>HangZhou</h3>
+        <p>HangZhou is a digital city.</p>
+    </div>
+
+    <div id="BJ" class="summary">
+        <h3>BeiJing</h3>
+        <p>BeiJing is a capital city.</p>
+    </div>
+
+    <script>
+
+        function OpenCity(currEvent, idName) {
+            /* hidden all */
+            var list = document.getElementsByClassName("summary")
+            for (i = 0; i < list.length; i++) {
+                list[i].style.display = "none";
+            }
+            /*display picked */
+            var pick = document.getElementById(idName)
+            pick.style.display = "block";
+
+            /* clear active  */
+            var btns = document.getElementsByClassName("city")
+            for (i = 0; i < btns.length; i++) {
+                btns[i].className = btns[i].className.replace(" active", "");
+            }
+            /* add active to selected */
+            currEvent.currentTarget.className += " active";
+        }
+
+        /*触发点击,显示默认页 */
+        document.getElementById("default").click();
+    </script>
+
+</body>
