@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--通过script修改style.display来控制隐藏/可见-->
+
+<head>
+    <style>
+        .weekday {
+            width: 100%;
+            background-color: darkgrey;
+            text-align: left;
+            font-size: 16px;
+            padding: 18px;
+            border: none;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .active,
+        .weekday:hover {
+            background-color: bisque;
+        }
+
+        .concept {
+            display: none;
+            padding: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Weekday, click&collapse.</h2>
+    <button class="weekday">Monday</button>
+    <div class="concept">Monday is the first day of a week! </div>
+    <button class="weekday">Tuesday</button>
+    <div class="concept">Tuesday is the second day of a week! </div>
+    <button class="weekday">Wensday</button>
+    <div class="concept">Wednesday is the third day of a week! </div>
+
+    <script>
+        var days = document.getElementsByClassName("weekday")
+        for (i = 0; i < days.length; i++) {
+            days[i].addEventListener("click", function () {
+
+                var next = this.nextElementSibling;
+                if (next.style.display == "none") {
+                    next.style.display = "block";
+                } else {
+                    next.style.display = "none";
+                }
+            });
+
+        }
+    </script>
+</body>
