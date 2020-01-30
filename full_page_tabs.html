@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--tab就是button控件-->
+
+<head>
+    <style>
+        /*要让body占满整个屏幕，必须要设置3个height: body&html&pageContent:height=100% */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+
+        /*横铺,中间无缝隙：float=left */
+        .tbutton {
+            float: left;
+            font-size: 30px;
+            border: none;
+            outline: none;
+            background-color: #f1f1f1;
+            width: 25%;
+        }
+
+        /*悬浮鼠标 */
+        .tbutton:hover {
+            background-color: #ddd;
+        }
+
+        /*默认隐藏:display=none */
+        .pageContent {
+            height: 100%;
+            display: none;
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="default" class="tbutton" onclick="OpenPage(this,'home')">Home</button>
+    <button class="tbutton" onclick="OpenPage(this,'news')">News</button>
+    <button class="tbutton" onclick="OpenPage(this,'contact')">Contact</button>
+    <button class="tbutton" onclick="OpenPage(this,'about')">About</button>
+
+
+    <div id="home" class="pageContent">
+        <h3>Home</h3>
+        <p>Home is first page.</p>
+    </div>
+
+    <div id="news" class="pageContent">
+        <h3>News</h3>
+        <p>News is interesting.</p>
+    </div>
+
+    <div id="contact" class="pageContent">
+        <h3>Contact</h3>
+        <p>Contact me by email or wechat.</p>
+    </div>
+
+    <div id="about" class="pageContent">
+        <h3>About</h3>
+        <p>About is info of site.</p>
+    </div>
+
+
+    <script>
+        /*选择一个来显示,其它隐藏 */
+        function OpenPage(currTButton, idName) {
+            /* hidden all except picked */
+            var list = document.getElementsByClassName("pageContent")
+            for (i = 0; i < list.length; i++) {
+                list[i].style.display = "none";
+            }
+            var pick = document.getElementById(idName)
+            pick.style.display = "block";
+
+            /*set current button color to same with page content 这样整个页面看起来是一个整体, other buttons restore to default color */
+            var btns = document.getElementsByClassName("tbutton")
+            for (i = 0; i < btns.length; i++) {
+                btns[i].style.backgroundColor = "";
+            }
+            currTButton.style.backgroundColor = "#ddd";
+        }
+        /* 显示触发click*/
+        document.getElementById("default").click();
+    </script>
+
+
+
+</body>
