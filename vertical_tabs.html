@@ -47,10 +47,11 @@
 <body>
     <h2>Vertical Tabs</h2>
     <p>Click on the button inside the tabbed menu</p>
+    <!--点击:onclick, 悬浮鼠标:onmouseover-->
     <div class="tab">
-        <button id="default" class="city" onclick="OpenCity(event,'WH')">WuHan</button>
-        <button class="city" onclick="OpenCity(event,'HZ')">HangZhou</button>
-        <button class="city" onclick="OpenCity(event,'BJ')">BeiJing</button>
+        <button id="default" class="city" onmouseover="OpenCity(event,'WH')">WuHan</button>
+        <button class="city" onmouseover="OpenCity(event,'HZ')">HangZhou</button>
+        <button class="city" onmouseover="OpenCity(event,'BJ')">BeiJing</button>
     </div>
 
     <div id="WH" class="summary">
@@ -76,16 +77,17 @@
             for (i = 0; i < list.length; i++) {
                 list[i].style.display = "none";
             }
-            /*display picked */
-            var pick = document.getElementById(idName)
-            pick.style.display = "block";
-
             /* clear active  */
             var btns = document.getElementsByClassName("city")
             for (i = 0; i < btns.length; i++) {
                 btns[i].className = btns[i].className.replace(" active", "");
             }
-            /* add active to selected */
+
+            /*display picked */
+            var pick = document.getElementById(idName)
+            pick.style.display = "block";
+
+            /* set active  */
             currEvent.currentTarget.className += " active";
         }
 
