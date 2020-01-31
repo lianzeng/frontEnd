@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div id="load">
+        <button onclick="loaddoc()">Ajax sample.</button>
+    </div>
+    <div id="resp" style="display:none">
+        <h2>AJAX</h2>
+        <p>AJAX is not a programming language. </p>
+        <p>AJAX is a technique for accessing web servers from a web page </p>
+        <p>AJAX stands for Asynchronous JavaScript And XML </p>
+    </div>
+
+    <script>
+        function loaddoc() {
+            var req = new XMLHttpRequest()
+            req.onreadystatechange = function () {
+                var ele = document.getElementById("load")
+                // ele.innerHTML = this.responseText;
+                ele.innerHTML = document.getElementById("resp").innerHTML
+            };
+            req.open("GET", "http://127.0.0.1:80/a.txt", true)
+            req.send()
+        }
+    </script>
+</body>
+
+</html>
