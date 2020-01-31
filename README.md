@@ -1,9 +1,9 @@
 # 前端示例
-这里的例子来自于 w3school.howto[https://www.w3schools.com/howto/default.asp]
+这里的例子来自于 [w3school.howto](https://www.w3schools.com/howto/default.asp)
 
 有些demo演示需要用到file server, 可以直接编译并运行file_server.go;
 
-## 获取dom element的几种方式[https://www.w3schools.com/js/js_htmldom_elements.asp]
+## [获取dom element的几种方式](https://www.w3schools.com/js/js_htmldom_elements.asp)
 - document.getElementsByClassName() 选多个，根据class=xx
 - document.getElementsByTagName() ，根据标签,比如"button","li","a",
 - document.getElementById() 选某个元素,根据id=xx, 最常用，
@@ -16,4 +16,4 @@
 
 - innerHTML:元素内容，很重要的属性；
 
-## 一些最常用的DOM操作[https://www.w3schools.com/js/js_htmldom_document.asp]
+## [一些最常用的DOM操作](https://www.w3schools.com/js/js_htmldom_document.asp)
