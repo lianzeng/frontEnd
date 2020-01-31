@@ -17,3 +17,40 @@
 - innerHTML:元素内容，很重要的属性；
 
 ## [一些最常用的DOM操作](https://www.w3schools.com/js/js_htmldom_document.asp)
+- document.getElementById(id)
+- element.innerHTML =  new content
+- element.style.property = new style, eg: element.style.display="none;
+- document.appendChild(element)
+- document.removeChild(element);
+- element.addEventListener("click",func(){ });
+- document.documentElement:	Returns the < html> element;
+- document.forms:	Returns all < form> elements;
+- document.readyState:	Returns the loading status of the document;
+- document.referrer:	Returns the URI of the referrer (the linking document);
+- document.inputEncoding:	Returns the document's encoding (character set)
+- document.baseURI/URL/title/body/cookie/documentURI/domain/head/images/links/scripts;
+
+
+## [定时器](https://www.w3schools.com/js/js_timing.asp)
+- t = setTimeout(function, milliseconds)， 1次性定时器
+- clearTimeout(t);
+- t = setInterval(function, milliseconds) 周期定时器
+- clearInterval(t);
+
+## [Ajax ](https://www.w3schools.com/js/js_ajax_intro.asp)
+- 让浏览器发送XMLHttpRequest到webserver来获取data,并通过设置好的回调函数（异步）处理response data,这些都是通过javascript完成的；
+- AJAX = Asynchronous JavaScript.
+
+
+## 常见的style
+- float:left  横铺
+- display:block 竖铺, display:none 隐藏， display="" 显示;
+- display:flex 列布局
+- .class 通过class 设置
+- #id  通过id设置；
+- < br>换行
+- < b>加粗< /b>
+
+## [jQuery,deprecated](https://www.w3schools.com/js/js_jquery_selectors.asp)
+- 现在没人使用jquery了，因为代码太难读了，都被js替换了，
+[完成同样的功能，jquery对比javascript](https://www.w3schools.com/js/js_jquery_selectors.asp)
