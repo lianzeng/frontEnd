@@ -8,7 +8,11 @@
 <body>
     <div id="load">
         <h3>Ajax Demo</h3>
-        <p>this demo depend on a local fileserver,you can start a fileserver via the file_server.go.</p>
+        <p>this demo depend on a webserver,you can start a local file server via the file_server.go.</p>
+        <p><b>Attention:</b>you must open current page via url(like:http://127.0.0.1:8088/ajax_sample.html), <br>
+            Not directly open it(file:///Users/liangzeng/w3school/ajax_sample.html),<br>
+            otherwise will not work out.(blocked by cors policy when try to access resp data.)
+        </p>
         <button onclick="loadDoc()" style="font-size: 20px">click me to get data from server</button>
     </div>
     <div id="mockresp" style="display:none">
@@ -25,10 +29,11 @@
             var req = new XMLHttpRequest();
             //set callback function to process resp data
             req.onreadystatechange = function () {
-                var ele = document.getElementById("load")
+                // var ele = document.getElementById("load")
                 // ele.innerHTML = document.getElementById("mockresp").innerHTML
-                //如果要access resp body(this指向resp),这里需要考虑cors policy,比如:当前页面的domain和request url保持一致;
-                ele.innerHTML = this.responseText;
+                // ele.innerHTML = this.responseText;
+                //如果要access resp body(this指向resp),需要考虑cors policy,否则无法获取到;
+                document.documentElement.innerHTML = this.responseText;//把当前页面替换掉
             };
             //先在本地起一个fileserver(go 源码参考 file_server.go)
             req.open("GET", "http://127.0.0.1:8088/README.md", true);
