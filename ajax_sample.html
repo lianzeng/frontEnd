@@ -29,14 +29,16 @@
             var req = new XMLHttpRequest();
             //set callback function to process resp data
             req.onreadystatechange = function () {
-                // var ele = document.getElementById("load")
-                // ele.innerHTML = document.getElementById("mockresp").innerHTML
-                // ele.innerHTML = this.responseText;
-                //如果要access resp body(this指向resp),需要考虑cors policy,否则无法获取到;
-                document.documentElement.innerHTML = this.responseText;//把当前页面替换掉
+                if (this.readyState == 4 && this.status == 200) { //加载完毕
+                    // var ele = document.getElementById("load")
+                    // ele.innerHTML = document.getElementById("mockresp").innerHTML
+                    // ele.innerHTML = this.responseText;
+                    //如果要access resp body(this指向resp),需要考虑cors policy,否则无法获取到;
+                    document.documentElement.innerHTML = this.responseText;//把当前页面替换掉
+                }
             };
             //先在本地起一个fileserver(go 源码参考 file_server.go)
-            req.open("GET", "http://127.0.0.1:8088/README.md", true);
+            req.open("GET", "http://127.0.0.1:8088/full_page_tabs.html", true);
             req.send();
         }
     </script>
