@@ -1,7 +1,22 @@
 # 前端示例
-这里的例子来自于 [w3school.howto](https://www.w3schools.com/howto/default.asp)
+这里的例子来自于 [w3school.howto](https://www.w3schools.com/howto/default.asp),这个网站是学习前端的最佳平台，可在线实验，需要翻墙访问;
 
 有些demo演示需要用到file server, 可以直接编译并运行file_server.go;
+
+## [html:控制布局](https://www.w3schools.com/html/default.asp)
+- 最新语法[html5](https://www.w3schools.com/html/html5_intro.asp),
+- 新增的控件:< audio>,< video>,< svg>,< canvas>,
+- 新增语义标签：< section>,< header>, < footer>,< article>，
+- 表单新增属性:date,time,calendar,range;
+- 新增API: Drag&Drop, LocalStorage, Geolocation,ApplicationCache;
+
+## [JavaScript:负责交互](https://www.w3schools.com/js/default.asp)
+- 最新语法[ES6](https://www.w3schools.com/js/js_es6.asp)
+
+
+## [CSS:样式](https://www.w3schools.com/css/default.asp)
+ - 最新语法css3
+
 
 ## [获取dom element的几种方式](https://www.w3schools.com/js/js_htmldom_elements.asp)
 - document.getElementsByClassName() 选多个，根据class=xx
@@ -53,7 +68,8 @@
 - < b>加粗< /b>
 
 
-## 常用标签tag
+## [常用标签tag](https://www.w3schools.com/tags/default.asp)
+- [所有tag 列表](https://www.w3schools.com/tags/default.asp)
 - < div id="xx" class="xx">xx< /div> 用div来包装若干个节点
 - < h1>xx< /h1>  一级header
 - < p>xx< /p>  段落，带换行
@@ -62,6 +78,12 @@
 - < button onclick="myfunc">xx< /button> 按钮，可点击；
 - < input type="text" name="username" value="">
 - < input type="submit" value="Submit"> 用在表单里面
+
+## 技巧总结
+- 从无到有3种方式：1)新建节点，2）本来就存在，display="none",修改为"",3)先放一个占位的node，然后给innerHTML赋值;
+
+## [Bootstrap:CSS framework](https://www.w3schools.com/bootstrap/bootstrap_ver.asp)
+
 
 ## [jQuery,deprecated](https://www.w3schools.com/js/js_jquery_selectors.asp)
 - 现在没人使用jquery了，因为代码太难读了，都被js替换了，
