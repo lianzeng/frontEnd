@@ -10,7 +10,7 @@
 - h5表单新增属性:date,time,calendar,range;
 - h5新增API: Drag&Drop, LocalStorage, Geolocation,ApplicationCache;
 - [布局](https://www.w3schools.com/html/html_layout.asp)有4种实现方式：1)css framework,比如bootstrap,w3.css; 2)css flex 属性(display=flex); 3)css grid; 4）css float属性 ; 推荐使用框架;
-- html file path[解释](https://www.w3schools.com/html/html_filepaths.asp),推荐使用相对路径,举例："/images/picture.jpg"表示domain/images,而 "images/picture.jpg"表示当前目录下的images子目录；
+- html file path[解释](https://www.w3schools.com/html/html_filepaths.asp),path如果以/开头表示相对于root目录，否则相对当前目录;
 
 ## [JavaScript:负责交互](https://www.w3schools.com/js/default.asp)
 - 最新语法[ES6](https://www.w3schools.com/js/js_es6.asp)
@@ -83,11 +83,9 @@
 - < div id="xx" class="xx">xx< /div> 用div来包装若干个节点
 - < h1>xx< /h1>  一级header
 - < p>xx< /p>  段落，带换行
-- < a href=url target=xx>xx< /a> 链接,target指定在哪个窗口打开，可以在指定的iframe打开, [target取值参考](https://www.w3schools.com/html/html_links.asp);
-- < form> 表单，由多个input组成的;
-- < button onclick="myfunc">xx< /button> 按钮，可点击；
-- < input type="text" name="username" value="">
-- < input type="submit" value="Submit"> 用在表单里面
+- < a href=url target=xx>xx< /a> 链接,target指定在哪个窗口打开，可以在指定的iframe打开,默认值_self在当前页面打开， [target取值参考](https://www.w3schools.com/html/html_links.asp);
+- < form action=url,method="post"> 表单，form内包含多个input,如果method="GET"(默认值),数据会体现在url.query中，如果用post就在body（敏感信息应该用post),[form控件](https://www.w3schools.com/html/html_forms.asp);
+- < input type="xx" name="username" value="">,input控件非常多，有file，text,radio单选,password,submit,reset,checkbox多选,button,date日期,time,email,range,Tel电话,search,[input控件](https://www.w3schools.com/html/html_form_input_types.asp)
 - < img src=url alt="alternative text" width="104" height="142">
 - < ul>< li>xx< /li>< /ul> 列表,ul=UnorderList
 
