@@ -61,6 +61,18 @@
 ## [Ajax：和server交互 ](https://www.w3schools.com/js/js_ajax_intro.asp)
 - 让浏览器发送XMLHttpRequest到webserver来获取data,并通过设置好的回调函数（异步）处理response data,这些都是通过javascript完成的；
 - AJAX = Asynchronous JavaScript.
+```
+Ajax code example:
+function sendRequest() {
+            var req = new XMLHttpRequest();
+            req.open("GET", url, true);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.onreadystatechange = function () { //callback
+                console.log(this.responseText)//do something with response data
+            }
+            req.send(body)
+        }   
+```
 
 
 ## [CSS常见的style](https://www.w3schools.com/css/css_intro.asp)
