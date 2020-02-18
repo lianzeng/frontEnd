@@ -84,6 +84,8 @@ function sendRequest() {
 - < br>换行
 - < b>加粗< /b>
 -  '*' 给所有element设置style
+- .menu .inner 多选择之间空格表示"嵌套"，逗号表示"或"
+- [css动画](https://www.w3schools.com/css/css3_animations.asp): @keyframes 定义变化from-to, 属性:animation-name,animation-duration;
 - 常用style：font-size,border,padding,margin,color,background-color;
 
 
@@ -118,3 +120,9 @@ function sendRequest() {
 ## [jQuery,deprecated](https://www.w3schools.com/js/js_jquery_selectors.asp)
 - 现在没人使用jquery了，因为代码太难读了，都被js替换了，
 [完成同样的功能，jquery对比javascript](https://www.w3schools.com/js/js_jquery_selectors.asp)
+
+
+## React
+- [我的reactor沙盒](https://codesandbox.io/u/lianzeng)
+- [React Hooks入门教程](http://www.ruanyifeng.com/blog/2019/09/react-hooks.html),用函数组件替换class组件，通过Hooks引入状态，useState(状态)，useContext(共享状态)，useReducer(action钩子)，useEffect(向服务器发请求,订阅事件,变更DOM元素)，useRef;
+- 本地新建project: npx create-react-app hellobutton, 之后运行yarn start 就可以打开localhost:3000看到效果了;
